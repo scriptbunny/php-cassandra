@@ -11,7 +11,11 @@ class Varchar extends Base{
         if ($value === null)
             return;
         
-        $this->_binary = $this->_value = $value;
+        $this->_binary = $this->_value = (string)$value;
+    }
+
+    public function setBinary($value) {
+        $this->_binary = $this->_value = (string)$value;
     }
     
     public function getBinary(){
